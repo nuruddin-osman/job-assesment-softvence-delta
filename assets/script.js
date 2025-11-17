@@ -1,3 +1,5 @@
+//=================== Nav menu active item ====================
+
 document.addEventListener("DOMContentLoaded", () => {
   const navItems = document.querySelectorAll(".nav-item");
 
@@ -23,7 +25,7 @@ cards.forEach((card) => {
   const playBtn = card.querySelector(".playBtn");
   const waveBeat = card.querySelector(".waveBeat");
 
-  // Wave bar generate
+  //============== Wave bar generate==================
   const totalBars = 30;
   for (let i = 0; i < totalBars; i++) {
     const bar = document.createElement("div");
@@ -52,9 +54,8 @@ cards.forEach((card) => {
   });
 });
 
-/* =============================== */
-/* NAV TOGGLE JS       */
-/* =============================== */
+
+/*======================= NAV TOGGLE JS  ===========================     */
 
 const mobileToggle = document.getElementById("mobileToggle");
 const navMenuWrapper = document.getElementById("navMenuWrapper");
