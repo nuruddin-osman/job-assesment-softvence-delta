@@ -387,7 +387,7 @@ textarea {
 #popular {
     background-color: #F8F2EA;
     border-radius: 80px;
-    padding: 80px;
+    padding: 80px 0;
 }
 
 #popular .popular_wrapper {
@@ -703,7 +703,12 @@ textarea {
 
 /* ================= End Responsive Container ================= */
 
-
+#popular .content .dubble_img .img_ovarlay h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #FFFFFF;
+}
 
 
 /* Responsive styles */
@@ -725,6 +730,7 @@ textarea {
     }
 
     /* navbar */
+   /* navbar */
     .nav_menu_wrapper {
         position: fixed;
         top: 104px;
@@ -808,6 +814,73 @@ textarea {
         height: 45px;
     }
 
+    /* Popular Sound Effect  */
+    #popular {
+        border-radius: 25px;
+        padding: 50px 0;
+    }
+
+    #popular .section_text {
+        max-width: 60%;
+    }
+
+    #popular .primary_btn {
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    #popular .content {
+        gap: 10px;
+        margin-bottom: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    #popular .content .dubble_img .img_ovarlay {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    #popular .content .single_img {
+        gap: 10px;
+    }
+
+    #popular .content .dubble_img .img_ovarlay h4 {
+        font-size: 18px;
+    }
+
+    #popular .content .dubble_img .img_ovarlay p {
+        font-size: 10px;
+    }
+
+    /* Popular Card start */
+    #popular_card .content {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    /* footer */
+    .footer_wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #footer_section .right {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 20px;
+    }
+
+    .right .links {
+        width: 100%;
+    }
+
+    #footer_section {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        padding-top: 80px;
+    }
+
+
+
 }
 
 @media (max-width: 576px) {
@@ -856,6 +929,61 @@ textarea {
 
     .card_s {
         width: 100%;
+    }
+
+    /* Popular Sound Effect  */
+    #popular .section_text {
+        max-width: 50%;
+    }
+
+    #popular .content .dubble_img .img_ovarlay {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #popular .content .dubble_img .img_ovarlay h4 {
+        font-size: 14px;
+    }
+
+    /* Popular Card start */
+    #popular_card .content {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* footer */
+    .footer_wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .fotter_logo {
+        height: 50px;
+        width: 80px;
+    }
+
+    #footer_section article {
+        margin-top: 0;
+    }
+
+    #footer_section .right {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+
+    .links h5 {
+        margin-bottom: 10px;
+    }
+
+    .email {
+        margin-bottom: 12px;
+        font-size: 32px;
+    }
+
+    .bottoms {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 32px;
     }
 
 }
