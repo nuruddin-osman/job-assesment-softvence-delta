@@ -1,0 +1,437 @@
+/* CSS byDefault configuration  start*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Saira Condensed", sans-serif;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+a {
+    padding: 0 !important;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: "Saira Condensed", sans-serif;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Common css */
+.section_heading {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #1D1F2C;
+}
+#section_text{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #777980;
+}
+
+
+/* CSS byDefault configuration  end*/
+
+/* =======================Fonts family======================
+    font-family: "Saira Condensed", sans-serif;
+=======================Fonts family====================== */
+
+/* navbar start */
+.navbar {
+    padding: 24px 0;
+    height: 104px;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 52px;
+    border-bottom-right-radius: 52px;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 146px;
+    height: 56px;
+    overflow: hidden;
+}
+
+.nav_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_menu_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #1D1F2C;
+    font-size: 18px;
+    line-height: 160%;
+    font-weight: 500;
+    display: block;
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #1D1F2C;
+}
+
+.primary_btn {
+    background-color: #1D1F2C;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px 32px;
+    font-size: 18px;
+    line-height: 160%;
+    font-weight: 500;
+}
+
+/* navbar end */
+
+
+/* Banner start */
+#banner {
+    background-image: url(../assets//images/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding: 350px 0;
+}
+
+#banner::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.banner_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#banner h1 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+#banner p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+    max-width: 566px;
+    color: #E9E9EA;
+    letter-spacing: 0.5%;
+}
+
+#banner .corner_radius_section {
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+}
+
+
+/* Banner end */
+
+/* Latest Sound Effects Start */
+
+#sound_effect {
+    position: relative;
+}
+
+#sound_effect .container {
+    padding-bottom: 240px;
+}
+
+#sound_effect .heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#sound_effect .heading p {
+    text-align: right;
+}
+
+#sound_effect .btn_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.btn_icon_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.secondary_btn {
+    background-color: #EAEFF2;
+    color: #777980;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 10px 32px;
+    line-height: 160%;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5%;
+    height: 48px;
+}
+
+.sound_icon {
+    height: 48px;
+    background-color: #EAEFF2;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+
+.card {
+    max-width: 424px;
+    background-color: #F8FAFB;
+    border-radius: 16px;
+    overflow: hidden;
+
+}
+
+.sound_card .card .card_padding {
+    padding: 24px 27px;
+}
+
+.sound_card .card .title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sound_card .card .title .title_img {
+    width: 80px;
+    height: 80px;
+}
+
+.sound_card .card .title .title_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.sound_card .card .action {
+    display: flex;
+    align-items: center;
+
+}
+
+.sound_card .card .action img {
+    width: 24px;
+    height: 24px;
+}
+
+.third_btn {
+    background-color: #EAEFF2;
+    color: #777980;
+    padding: 20px 60px;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+}
+
+.action .third_btn:last-child {
+    border-right: none;
+}
+
+.sound_card .audio-box {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EAEFF2;
+    padding: 8px;
+    border-radius: 24px;
+    margin-top: 30px;
+}
+
+.speaker,
+.duration {
+    color: #4A4C56;
+}
+
+.play-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #1D1F2C;
+    font-size: 12px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.waveform {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.waveform .bar {
+    width: 2px;
+    height: 10px;
+    background-color: #1D1F2C;
+}
+
+
+/* Latest Sound Effects end */
+
+
+/* Popular Sound Effect start */
+#popular {
+    background-color: #F8F2EA;
+    border-radius: 80px;
+    padding: 80px;
+}
+
+#popular .popular_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+#popular .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+#popular .content .dubble_img {
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#popular .content .dubble_img img {
+    width: 100% !important;
+    height: 100%;
+}
+
+#popular .content .dubble_img .img_ovarlay {
+    bottom: 24px;
+    left: 24px;
+    position: absolute;
+}
+
+#popular .content .dubble_img .img_ovarlay h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+#popular .content .dubble_img .img_ovarlay p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #E9E9EA;
+}
+
+#popular .content .single_img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#popular .content:nth-child(even) {
+    direction: rtl;
+}
+
+#popular .content:nth-child(even)>* {
+    direction: ltr;
+}
+
+
+
+/* Popular Sound Effect end */
+
+
+
+/* Popular Card start */
+
+/* Popular Card end */
