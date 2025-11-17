@@ -24,7 +24,7 @@ cards.forEach((card) => {
   const waveBeat = card.querySelector(".waveBeat");
 
   // Wave bar generate
-  const totalBars = 40;
+  const totalBars = 30;
   for (let i = 0; i < totalBars; i++) {
     const bar = document.createElement("div");
     bar.classList.add("bar");

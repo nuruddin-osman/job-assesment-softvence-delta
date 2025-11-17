@@ -267,6 +267,7 @@ textarea {
     height: 48px;
 }
 
+
 .sound_icon {
     height: 48px;
     background-color: #EAEFF2;
@@ -318,17 +319,20 @@ textarea {
 
 }
 
-.sound_card .card_s .action img {
-    width: 24px;
-    height: 24px;
+.sound_card .card_s .action i {
+    font-size: 20px;
 }
 
 .third_btn {
     background-color: #EAEFF2;
     color: #777980;
-    padding: 20px 60px;
     border-top: 1px solid #FFFFFF;
     border-right: 1px solid #FFFFFF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .action .third_btn:last-child {
@@ -705,6 +709,21 @@ textarea {
 /* Responsive styles */
 @media (max-width: 992px) {
 
+    /* Common css */
+    .section_heading {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    #section_text {
+        font-size: 16px;
+    }
+
+    .primary_btn {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+
     /* navbar */
     .nav_menu_wrapper {
         position: fixed;
@@ -744,14 +763,63 @@ textarea {
     #banner h1 {
         font-size: 50px;
     }
+
     #banner .corner_radius_section {
-	height: 50px;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-}
+        height: 50px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /* Latest Sound Effects  */
+    #sound_effect .heading {
+        flex-direction: column;
+    }
+
+    #sound_effect .btn_wrapper {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .secondary_btn {
+        padding: 10px 18px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .sound_icon {
+        height: 44px;
+    }
+
+    .sound_card {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .waveBeat {
+        gap: 1.5px;
+    }
+
+    .waveBeat .bar {
+        width: 1px;
+    }
+
+    .sound_card .card_s .title .title_img {
+        width: 60px;
+        height: 45px;
+    }
+
 }
 
 @media (max-width: 576px) {
+
+    /* Common css */
+    .section_heading {
+        font-size: 36px;
+    }
+
+    #section_text {
+        font-size: 14px;
+    }
 
     /* navbar */
     .navbar {
@@ -778,4 +846,16 @@ textarea {
     #banner p {
         font-size: 18px;
     }
+
+
+    /* Latest Sound Effects  */
+    .sound_card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card_s {
+        width: 100%;
+    }
+
 }
