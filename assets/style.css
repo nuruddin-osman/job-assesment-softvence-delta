@@ -61,12 +61,20 @@ textarea {
     color: #777980;
 }
 
+.container {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
 
 /* CSS byDefault configuration  end*/
 
 /* =======================Fonts family======================
     font-family: "Saira Condensed", sans-serif;
 =======================Fonts family====================== */
+
+
 
 /* navbar start */
 .navbar {
@@ -80,10 +88,6 @@ textarea {
     width: 100%;
 }
 
-.container {
-    width: 1320px;
-    margin: 0 auto;
-}
 
 .logo {
     width: 146px;
@@ -140,6 +144,16 @@ textarea {
     font-size: 18px;
     line-height: 160%;
     font-weight: 500;
+}
+
+/* Mobile toggle button */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #1D1F2C;
+    cursor: pointer;
 }
 
 /* navbar end */
@@ -264,7 +278,7 @@ textarea {
     padding: 0 10px;
 }
 
-.sound_card{
+.sound_card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
@@ -590,43 +604,49 @@ textarea {
     text-decoration: underline;
     margin-bottom: 20px;
 }
-.bottoms{
+
+.bottoms {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.bottoms p{
+.bottoms p {
     font-size: 16px;
     font-weight: 400;
     line-height: 160%;
     color: #E9E9EA;
     letter-spacing: 0.5%;
 }
-.bottoms span{
+
+.bottoms span {
     color: #FFFFFF;
     font-size: 20px;
     line-height: 130%;
     font-weight: 500;
 }
-.bottoms .links{
+
+.bottoms .links {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.bottoms .links h5{
+
+.bottoms .links h5 {
     color: #FFFFFF;
     font-size: 20px;
     line-height: 130%;
     font-weight: 500;
     margin-bottom: 0;
 }
-.bottoms .links ul{
+
+.bottoms .links ul {
     display: flex;
     align-items: center;
     gap: 6px;
 }
-.s_icon{
+
+.s_icon {
     height: 32px;
     width: 32px;
     background-color: #FFFFFF;
@@ -635,9 +655,127 @@ textarea {
     align-items: center;
     justify-content: center;
 }
-.s_icon i{
+
+.s_icon i {
     color: #070707;
     font-size: 20px;
 }
 
 /* Footer end */
+
+
+
+/* ================= Responsive Container (Extra Code) ================= */
+@media (max-width: 1399px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* ================= End Responsive Container ================= */
+
+
+
+
+/* Responsive styles */
+@media (max-width: 992px) {
+
+    /* navbar */
+    .nav_menu_wrapper {
+        position: fixed;
+        top: 104px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 104px);
+        background-color: #777980;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0 0 54px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 998;
+    }
+
+    .nav_menu_wrapper.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .navbar {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    /* Banner */
+    #banner h1 {
+        font-size: 50px;
+    }
+    #banner .corner_radius_section {
+	height: 50px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+}
+
+@media (max-width: 576px) {
+
+    /* navbar */
+    .navbar {
+        height: 80px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 36px;
+    }
+
+    .nav_menu_wrapper {
+        top: 80px;
+        height: calc(100vh - 80px);
+        padding: 40px 0 0 40px;
+    }
+
+    .navbar {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    /* Banner */
+    #banner p {
+        font-size: 18px;
+    }
+}

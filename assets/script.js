@@ -14,12 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// সব card নির্ধারণ
+// All card select
 const cards = document.querySelectorAll(".card_s");
 
 cards.forEach((card) => {
-  
-  // এই specific card এর elements
+
   const audio = card.querySelector(".audio");
   const playBtn = card.querySelector(".playBtn");
   const waveBeat = card.querySelector(".waveBeat");
@@ -31,7 +30,6 @@ cards.forEach((card) => {
     bar.classList.add("bar");
     waveBeat.appendChild(bar);
   }
-
   const bars = card.querySelectorAll(".bar");
 
   // Random height
@@ -54,41 +52,23 @@ cards.forEach((card) => {
   });
 });
 
+/* =============================== */
+/* NAV TOGGLE JS       */
+/* =============================== */
 
-// // ==========================weve beat bar create=====================
-// const waveBeat = document.querySelector(".waveBeat");
-// const totalBars = 40;
+const mobileToggle = document.getElementById("mobileToggle");
+const navMenuWrapper = document.getElementById("navMenuWrapper");
 
-// for (let i = 0; i < totalBars; i++) {
-//   const bar = document.createElement("div");
-//   bar.classList.add("bar");
-//   waveBeat.appendChild(bar);
-// }
+mobileToggle.addEventListener("click", function () {
+  navMenuWrapper.classList.toggle("active");
 
-// //====================Audio paly function==================
-// const audio = document.querySelector(".audio");
-// const playBtn = document.querySelector(".playBtn");
-// const bars = document.querySelectorAll(".bar");
-
-// // Play / Pause Toggle
-// playBtn.addEventListener("click", () => {
-//   if (audio.paused) {
-//     console.log("thik ache");
-
-//     audio.play();
-//     playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
-//     bars.forEach((bar) => (bar.style.animationPlayState = "running"));
-//   } else {
-//     audio.pause();
-//     playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-//     bars.forEach((bar) => (bar.style.animationPlayState = "paused"));
-//   }
-// });
-
-// // Random height for bars
-// bars.forEach((bar) => {
-//   const h = Math.floor(Math.random() * 25) + 5;
-//   bar.style.height = h + "px";
-// });
-
-  
+  // Toggle between hamburger and close icons
+  const icon = mobileToggle.querySelector("i");
+  if (navMenuWrapper.classList.contains("active")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  }
+});
