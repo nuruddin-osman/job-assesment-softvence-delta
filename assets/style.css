@@ -83,7 +83,7 @@ textarea {
     background-color: #FFFFFF;
     border-bottom-left-radius: 52px;
     border-bottom-right-radius: 52px;
-    position: absolute;
+    position: fixed;
     z-index: 999;
     width: 100%;
 }
@@ -149,11 +149,12 @@ textarea {
 /* Mobile toggle button */
 .mobile-toggle {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
     font-size: 24px;
     color: #1D1F2C;
     cursor: pointer;
+    z-index: 99999;
 }
 
 /* navbar end */
@@ -730,9 +731,9 @@ textarea {
     }
 
     /* navbar */
-   /* navbar */
+    /* navbar */
     .nav_menu_wrapper {
-        position: fixed;
+        position: absolute;
         top: 104px;
         left: 0;
         width: 100%;
@@ -766,6 +767,9 @@ textarea {
     }
 
     /* Banner */
+    #banner {
+    padding: 200px 0;
+}
     #banner h1 {
         font-size: 50px;
     }
