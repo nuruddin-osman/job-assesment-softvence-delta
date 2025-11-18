@@ -1,26 +1,23 @@
 //=================== Nav menu active item ====================
 
-document.addEventListener("DOMContentLoaded", () => {
-  const navItems = document.querySelectorAll(".nav-item");
+const navItems = document.querySelectorAll(".nav-item");
 
-  navItems.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
+navItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
 
-      navItems.forEach((navItem) => {
-        navItem.classList.remove("active");
-      });
-
-      item.classList.add("active");
+    navItems.forEach((navItem) => {
+      navItem.classList.remove("active");
     });
+
+    item.classList.add("active");
   });
 });
 
-// All card select
+// =================== All card select ===================
 const cards = document.querySelectorAll(".card_s");
 
 cards.forEach((card) => {
-
   const audio = card.querySelector(".audio");
   const playBtn = card.querySelector(".playBtn");
   const waveBeat = card.querySelector(".waveBeat");
@@ -34,13 +31,15 @@ cards.forEach((card) => {
   }
   const bars = card.querySelectorAll(".bar");
 
-  // Random height
+  //==============Wave bar Random height =================
+
   bars.forEach((bar) => {
-    const h = Math.floor(Math.random() * 25) + 5;
+    const h = Math.floor(Math.random() * 20) + 10;
     bar.style.height = h + "px";
+    bar.style.setProperty("--initial-height", h + "px");
   });
 
-  // Play/Pause Logic
+  //============  Play/Pause Logic ===================
   playBtn.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
@@ -54,8 +53,7 @@ cards.forEach((card) => {
   });
 });
 
-
-/*======================= NAV TOGGLE JS  ===========================     */
+/*======================= Navbar toggle  ===========================     */
 
 const mobileToggle = document.getElementById("mobileToggle");
 const navMenuWrapper = document.getElementById("navMenuWrapper");

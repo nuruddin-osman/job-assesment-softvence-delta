@@ -369,15 +369,25 @@ textarea {
 }
 
 .waveBeat {
-    display: flex;
-    gap: 3px;
-    align-items: center;
+  display: flex;
+  gap: 3px;
+  align-items: center;
 }
 
 .waveBeat .bar {
-    width: 2px;
-    height: 10px;
-    background-color: #1D1F2C;
+  width: 2px;
+  background-color: #1D1F2C;
+  animation: wave 0.5s infinite alternate;
+  animation-play-state: paused;
+}
+  
+@keyframes wave {
+  from {
+    height: var(--initial-height);
+  }
+  to {
+    height: calc(var(--initial-height) + 15px);
+  }
 }
 
 
